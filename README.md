@@ -9,7 +9,9 @@ for the same.
 
 * git
 * [docker-compose](https://docs.docker.com/compose/install/#install-compose-on-linux-systems)
-
+* a server with at least _some_ swap space (check with `swapon --show`, [create if necessary](https://itsfoss.com/create-swap-file-linux/)).
+  * Consider an always-free GCP f1-micro instance ([see this guide](/gcp-f1-micro.md))
+  * also consider a digitalocean $5-a-month droplet
 
 ## get the certs
 
