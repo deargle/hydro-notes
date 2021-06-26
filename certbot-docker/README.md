@@ -23,10 +23,9 @@ docker-compose run certbot certonly \
         --deploy-hook 'docker restart example-container-name'
 ```
 
-Remember to schedule a cron job to renew your certs:
+Remember to schedule a cron job to renew your certs. Run the following
+_from the directory of your certbot-docker folder_:
 
 ```
-export CERTBOT_DOCKER_DIR=/root/certbot-docker
-
-SLEEPTIME=$(awk 'BEGIN{srand(); print int(rand()*(3600+1))}'); echo "0 0,12 * * * root sleep $SLEEPTIME && cd ${CERTBOT_DOCKER_DIR} && docker-compose run certbot renew -q" | sudo tee -a /etc/crontab > /dev/null
+SLEEPTIME=$(awk 'BEGIN{srand(); print int(rand()*(3600+1))}'); echo "0 0,12 * * * root sleep $SLEEPTIME && cd ${PWD} && docker-compose run certbot renew -q" | sudo tee -a /etc/crontab > /dev/null
 ```
