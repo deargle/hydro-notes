@@ -16,7 +16,7 @@ for the same.
 Set up DNS records to point to the public ip of the server you will use. Then,
 use certbot to generate certs for both mycodo and mqtt.
 
-See the (/certbot-docker)[/certbot-docker] folder in this repository.
+See the [/certbot-docker](/certbot-docker) folder in this repository.
 
 
 ## MyCodo
