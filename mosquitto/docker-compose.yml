@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+    broker:
+        container_name: mosquitto
+        image: eclipse-mosquitto:2.0.11-openssl
+        restart: always
+        volumes:
+            - ./mosquitto.conf:/mosquitto/config/mosquitto.conf
+            - /etc/letsencrypt/live/mqtt.daveeargle.com:/mosquitto/certs/live/mqtt.daveeargle.com
+            - /etc/letsencrypt/archive/mqtt.daveeargle.com:/mosquitto/certs/archive/mqtt.daveeargle.com
+        ports:
+            - "1883:1883"
+            - "8883:8883"
