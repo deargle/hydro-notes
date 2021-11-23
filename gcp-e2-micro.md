@@ -11,11 +11,13 @@ go to [console.cloud.google.com](https://console.cloud.google.com), select your 
 
 create a new instance.
 
-* To be on the free tier, you need to use an "f1-micro" instance, which is only available on the "N1" series.
+* To be on the free tier, you need to use an "e2-micro" instance, which is only available on the "N1" series.
 * And you need to be using HDD, which is a "standard persistent disk", _not_ the default "balanced persistent disk." I'm leaving the default Debian 10 Buster image. I boost disk size to 30 GB -- the more disk size you ask for, the better disk IO speeds GCP gives you. Shown in screenshot.
 * Tick the boxes to allow HTTP and HTTPS through the gcp firewall (screenshot 2 below).
 * I leave all other defaults.
 * click the fatty "create" button
+
+Note!! Screenshots below incorrect, use E2-micro, _not_ f1-micro!
 
 ![image](https://user-images.githubusercontent.com/1174653/123358233-5a942b00-d528-11eb-93e9-b82500428a33.png)
 
